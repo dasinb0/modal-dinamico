@@ -1,0 +1,63 @@
+<div class="modal open">
+  <div class="modal-content">
+    <span class="close" (click)="close()">&times;</span>
+    <div *ngIf="item" class="modal-body">
+      <p><strong>Name:</strong> {{ item.name }}</p>
+      <p><strong>Weight:</strong> {{ item.weight }}</p> <!-- Agregado -->
+      <p><strong>Location Area Encounters:</strong> {{ item.location_area_encounters }}</p> <!-- Agregado -->
+      <p><strong>Abilities:</strong></p>
+      <ul>
+        <li *ngFor="let ability of item.abilities">
+          {{ ability.ability.name }}
+        </li>
+      </ul>
+      <p><strong>Moves:</strong></p>
+      <ul>
+        <li *ngFor="let move of item.moves">
+          {{ move.move.name }}
+        </li>
+      </ul>
+      <p><strong>Stats:</strong></p>
+      <ul>
+        <li *ngFor="let stat of item.stats">
+          {{ stat.stat.name }}: {{ stat.base_stat }}
+        </li>
+      </ul>
+    </div>
+ 
+      <!-- Sección para los datos de Pikachu -->
+<!-- Sección para los datos de Pikachu -->
+<div *ngIf="pikachuItem" class="modal-body">
+  <p><strong>Name:</strong> {{ pikachuItem.name }}</p>
+  <p><strong>Weight:</strong> {{ pikachuItem.weight }}</p>
+  <p><strong>Location Area Encounters:</strong> {{ pikachuItem.location_area_encounters }}</p>
+  <p><strong>Abilities:</strong></p>
+  <ul>
+    <li *ngFor="let ability of pikachuItem.abilities">
+      {{ ability.ability.name }}
+    </li>
+  </ul>
+  <p><strong>Moves:</strong></p>
+  <ul>
+    <li *ngFor="let move of pikachuItem.moves">
+      {{ move.move.name }}
+    </li>
+  </ul>
+  <p><strong>Stats:</strong></p>
+  <ul>
+    <li *ngFor="let stat of pikachuItem.stats">
+      {{ stat.stat.name }}: {{ stat.base_stat }}
+    </li>
+  </ul>
+</div>
+
+  </div>
+
+
+
+</div>
+
+
+
+
+

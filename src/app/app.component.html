@@ -1,0 +1,12 @@
+<div class="header">
+  <button (click)="openModal()">Abrir Modal</button>
+</div>
+
+<app-modal
+  [style.display]="isModalOpen ? 'block' : 'none'" 
+  (closeModal)="closeModal()">  
+</app-modal>
+<router-outlet></router-outlet>
+
+
+

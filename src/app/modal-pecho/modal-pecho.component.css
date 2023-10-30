@@ -1,0 +1,48 @@
+/* Colores */
+.modal {
+  background-color: #333;
+  color: #333;
+  display: flex; /* Usa flexbox para el contenedor principal */
+}
+
+.modal-content {
+  border-color: #3B0B0B;
+  box-shadow: 0 4px 8px rgba(153,102,51,0.4);
+  display: flex; /* Usa flexbox para el contenido */
+  flex-wrap: wrap; /* Envuelve los elementos a medida que la pantalla se estrecha */
+}
+
+/* Tipografía con efecto de fuego */
+.modal-body {
+  font-family: 'Georgia', serif;
+  font-size: 18px;
+  color: #FF4500; /* Color fuego para el texto */
+  text-shadow: 2px 2px 4px #FF0000; /* Sombra de fuego */
+  flex: 1; /* Hace que los elementos se expandan para llenar el espacio disponible */
+  padding: 10px; /* Añade espacio entre los elementos */
+}
+
+/* Estilo para la "X" de cierre */
+.close {
+  cursor: pointer;
+  font-size: 36px; /* Tamaño más grande */
+  color: #3B0B0B;
+}
+
+@keyframes slide-down {
+  0% { 
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .modal-content {
+    flex-direction: column; /* Cambia la dirección de flexbox a columna en resoluciones estrechas */
+    width: 90%;
+  }
+}
+
